@@ -31,4 +31,4 @@ Route::get('about', function() {
 	return view('about')->with('number_of_cats', 9000);
 });
 
-// Laravel 5 Essentials page 28. - Preparing the database
+// Laravel 5 Essentials page 34. - Preparing the database
