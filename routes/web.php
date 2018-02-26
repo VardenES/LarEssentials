@@ -46,4 +46,29 @@ Route::get('cats/breeds/{name}', function($name) {
 		->with('cats', $breed->cats);
 });
 
-// Laravel 5 Essentials page 38. - Preparing the database
+Route::get('cats/create', function() {
+	return view('cats.create');
+});
+
+Route::post('cats', function() {
+	$cat = LarEssentials\Cat::create(Input::all());
+	return redirect('cats/'.$cat->id)
+		->withSuccess('Cat has been created.');
+});
+
+Route::get('cats/{cat}/edit', function(LarEssentials\Cat $cat) {
+	return view('cats.edit')->with('cat', $cat);
+});
+
+Route::put('cats/{cat}', function(LarEssentials\Cat $cat) {
+	$cat->update(Input::all());
+	return redirect('cats/'.$cat->id)
+		->withSuccess('Cat has been updated.');
+});
+
+Route::delete('cats/{cat}', function(LarEssentials\Cat $cat) {
+	$cat->delete();
+	return redirect('cats')
+		->withSuccess('Cat has been deleted.');
+});
+// Laravel 5 Essentials page 43. - Preparing the database
