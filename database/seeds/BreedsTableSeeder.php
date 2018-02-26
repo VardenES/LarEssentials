@@ -16,6 +16,6 @@ class BreedsTableSeeder extends Seeder
         	['id' => 2, 'name' => "Persian"],
         	['id' => 3, 'name' => "Siamese"],
         	['id' => 4, 'name' => "Abyssinian"],        	        	
-        ])
+        ]);
     }
 }
