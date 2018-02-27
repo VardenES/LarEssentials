@@ -1,0 +1,40 @@
+
+
+// Antes de migrate porque aparecería:
+/* 		bootstrap/../vendor/autoload.php. Failed to open stream: No such file or directory.
+		The "vendor" folder does not exist. 
+*/
+composer update --no-scripts
+
+// Al hacer migrate aparece: 
+/*
+     [Illuminate\Database\QueryException]
+    SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table users add unique users_email_unique(email))
+
+    [PDOException]
+    SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes 
+*/
+// Sale con las nuevas aplicaciones si se está usando MySQL inferior a v5.7.7
+// Hay que editar AppServiceProvider.php y dentro del método boot establecer longitud por defecto:
+	use Illuminate\Support\Facades\Schema;
+
+	public function boot()
+	{
+	    Schema::defaultStringLength(191);
+	}
+
+// Sale erro al intentar entrar en index.php
+/*
+	RuntimeException
+
+	The only supported ciphers are AES-128-CBC and AES-256-CBC with the correct key lengths.
+
+*/
+php artisan key:generate
+
+/* Problema  FatalErrorException
+
+Class 'Collective\Html\HtmlServiceProvider' not found
+*/
+composer update
+
