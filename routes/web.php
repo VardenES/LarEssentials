@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 Route::get('cats', function() {
 	//return 'All cats';
-	$cats = Furbook\Cat::all();
+	$cats = LarEssentials\Cat::all();
 	return view('cats.index')->with('cats', $cats);
 });
 
@@ -29,7 +29,7 @@ Route::get('cats', function() {
 	return sprintf('Cat #%s', $id);
 })->where('id', '[0-9]+');*/
 Route::get('cats/{id}', function($id){
-	$cat = Furbook\Cat::find($id);
+	$cat = LarEssentials\Cat::find($id);
 	return view('cats.show')->with('cat', $cat);
 });
 
@@ -38,7 +38,7 @@ Route::get('about', function() {
 });
 
 Route::get('cats/breeds/{name}', function($name) {
-	$breed = Furbook\Breed::with('cats')
+	$breed = LarEssentials\Breed::with('cats')
 		->whereName($name)
 		->first();
 	return view('cats.index')
