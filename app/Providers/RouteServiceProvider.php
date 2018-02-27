@@ -3,9 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Support\Facades\Route;
-//use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
-use Illuminate\Support\ServiceProvider;
+//use Illuminate\Support\ServiceProvider;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -23,11 +23,11 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot($router)
     {
         //
 
-        //parent::boot($router);
+        parent::boot($router);
         //$router->model('cat', 'LarEssentials\Cat');
     }
 
