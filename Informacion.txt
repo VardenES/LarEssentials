@@ -38,3 +38,35 @@ Class 'Collective\Html\HtmlServiceProvider' not found
 */
 composer update
 
+
+
+// No funciona "Link_To" en view por ser Laravel 5
+composer require laravelcollective/html
+
+In your composer.json file in "require" group should be added this line:
+
+"laravelcollective/html": "5.2.*"
+
+Update composer with command:
+
+composer update
+
+In config/app.php add this lines:
+
+in providers group:
+
+Collective\Html\HtmlServiceProvider::class,
+
+in aliases group:
+
+'Form' => Collective\Html\FormFacade::class,
+
+'Html' => Collective\Html\HtmlFacade::class,
+
+
+
+
+
+
+
+https://github.com/PacktPublishing/Laravel-5-Essentials/blob/master/resources/views/cats/index.blade.php

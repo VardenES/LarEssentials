@@ -1,15 +1,18 @@
-<?php
-
-namespace Furbook;
+<?php namespace Furbook;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cat extends Model
-{
-    protected $fillable = ['name', 'date_of_birth', 'breed_id'];
+class Cat extends Model {
 
-    public function breed(){
-    	return $this->belongsTo('Furbook\Breed');
-    }
-    
+	protected $fillable = [
+		'name',
+		'date_of_birth',
+		'breed_id',
+	];
+
+	public function breed()
+	{
+		return $this->belongsTo('Furbook\Breed');
+	}
+
 }

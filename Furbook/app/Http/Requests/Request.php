@@ -1,10 +1,9 @@
-<?php
-
-namespace Furbook\Http\Requests;
+<?php namespace Furbook\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-abstract class Request extends FormRequest
-{
-    //
+abstract class Request extends FormRequest {
+
+	//
+
 }

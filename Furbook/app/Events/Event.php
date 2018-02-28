@@ -1,8 +1,7 @@
-<?php
+<?php namespace Furbook\Events;
 
-namespace Furbook\Events;
+abstract class Event {
 
-abstract class Event
-{
-    //
+	//
+
 }

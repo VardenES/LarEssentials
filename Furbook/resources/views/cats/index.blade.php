@@ -2,16 +2,15 @@
 
 @section('header')
 	@if (isset($breed))
-		<a href="{{ url('/') }}">Back to the overview</a>
+		<a href="{{ url('/') }}">Back to overview</a>
 	@endif
-
-	<h2>All @if (isset($breed)){{ $breed->name }} @endif Cats
-
-	<a href="{{ url('cats/create') }}" class="btn btn-primary pull-right">Add a new cat</a>
+	<h2>
+		All @if (isset($breed)){{ $breed->name }}@endif Cats
+		<a href="{{ url('cats/create') }}" class="btn btn-primary pull-right">
+			Add a new cat
+		</a>
 	</h2>
-
 @stop
-
 
 @section('content')
 	@foreach ($cats as $cat)

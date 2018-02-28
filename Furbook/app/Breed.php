@@ -1,13 +1,14 @@
-<?php
-
-namespace Furbook;
+<?php namespace Furbook;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Breed extends Model
-{
-    public $timestamps = false;
-    public function cats(){
-    	return $this->hasMany('Furbook\Cat');
-    }
+class Breed extends Model {
+
+	public $timestamps = false;
+
+	public function cats()
+	{
+		return $this->hasMany('Furbook\Breed');
+	}
+
 }

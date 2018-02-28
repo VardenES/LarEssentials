@@ -1,0 +1,34 @@
+<?php $__env->startSection('header'); ?>
+	<a href="<?php echo e(url('/')); ?>">Back to overview</a>
+	<h2><?php echo e($cat->name); ?></h2>
+	<a href="<?php echo e(url('cats/'.$cat->id.'/edit')); ?>">
+		<span class="glyphicon glyphicon-edit"></span>
+		Edit
+	</a>
+	<a href="<?php echo e(url('cats/'.$cat->id.'/delete')); ?>" data-method="delete" data-token="<?php echo e(csrf_token()); ?>" data-confirm="Are you sure?">
+		<span class="glyphicon glyphicon-trash"></span>
+		Delete
+	</a>
+
+	<form method="POST" action="<?php echo e(url('cats/'.$cat->id.'/delete')); ?>">
+	    <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
+	    <input type="hidden" name="_method" value="DELETE">
+	    <span class="glyphicon glyphicon-trash"></span>
+    <button type="submit">Delete</button>
+	</form>
+
+
+	<p>Last edited: <?php echo e($cat->updated_at); ?></p>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+	<p>Date of Birth: <?php echo e($cat->date_of_birth); ?></p>
+	<p>
+		<?php if($cat->breed): ?>
+			Breed:
+			<a href="<?php echo e(url('cats/breeds/'.$cat->breed->name)); ?>"><?php echo e($cat->breed->name); ?></a>
+		<?php endif; ?>
+	</p>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
