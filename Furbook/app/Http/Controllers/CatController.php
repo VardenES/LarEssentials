@@ -73,8 +73,8 @@ class CatController extends Controller {
 	 */
 	public function update(Cat $cat)
 	{
-		$cat->update(Input::all());
-
+		//$cat->update(Input::all());
+		$cat->update($cat);
 		return redirect('cats/'.$cat->id)
 			->withSuccess('Cat has been updated.');
 	}

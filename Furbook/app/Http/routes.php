@@ -48,14 +48,14 @@ Route::get('cats/{cat}/edit', function(Furbook\Cat $cat)
 		->with('cat', $cat);
 });
 
-Route::delete('cats/{cat}/delete', function(Furbook\Cat $cat) 
+Route::get('cats/{cat}/delete', function(Furbook\Cat $cat) 
 {
 	$cat->delete();
 	return redirect('cats')
 		->withSuccess('This cat has been eliminated.');
 });
 
-Route::put('cats/{cat}', function(Furbook\Cat $cat)
+Route::post('cats/{cat}', function(Furbook\Cat $cat)
 {
 	$cat->update(Input::all());
 
