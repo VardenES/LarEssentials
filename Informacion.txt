@@ -1,4 +1,4 @@
-
+﻿
 
 // Antes de migrate porque aparecería:
 /* 		bootstrap/../vendor/autoload.php. Failed to open stream: No such file or directory.
@@ -66,6 +66,9 @@ in aliases group:
 
 
 
+
+// Para alimentar Base de Datos:
+php artisan db:seed
 
 
 
