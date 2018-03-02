@@ -8,7 +8,7 @@ class Breed extends Model {
 
 	public function cats()
 	{
-		return $this->hasMany('Furbook\Breed');
+		return $this->hasMany('Furbook\Cat');
 	}
 
 }

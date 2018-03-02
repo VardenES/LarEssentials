@@ -1,5 +1,8 @@
 <?php
 
+use Furbook\Breed;
+use Furbook\Cat;
+
 Route::get('/', function()
 {
 	return redirect('cats');
@@ -14,29 +17,10 @@ Route::get('cats', function()
 
 Route::get('cats/breeds/{name}', function($name)
 {
-	$breed = Furbook\Breed::whereName($name)->firstOrFail();
-	$id = $breed[0]['attributes']['id'];
-	//$cats = Furbook\Cat::whereBreed_Id($id)->get();
-	//$cats = Furbook\Cat::whereBreed_Id($id)->get();
-	//$cats = Furbook\Cat::firstOrFail();
-
-
-
-//$cats = Furbook\Breed::whereName($name)->first()->cats;
-$cats = Furbook\Breed::get();
-	var_dump($cats);
-/*
-	$breeds = Furbook\Breed::with('cats')
-		->whereName($name)
-		->get();
-
-
-	$cats = Furbook \Breed::whereName($name)->first()->cats;
-*/
-
-	return view('cats.index')
-		->with('breed', $breed)
-		->with('cats', $cats);
+    $breed = Breed::whereName($name)->with('cats')->first();
+    return View::make('cats.index')
+        ->with('breed', $breed)
+        ->with('cats', $breed->cats);		
 });
 
 Route::get('cats/create', function()
@@ -60,12 +44,15 @@ Route::post('cats', function()
 
 Route::get('cats/{cat}/edit', function(Furbook\Cat $cat)
 {
-	return view('cats.edit')->with('cat', $cat);
+	return view('cats.edit')
+		->with('cat', $cat);
 });
 
-Route::delete('cats/{cat}/delete', function(Furbook\Cat $cat) {
+Route::delete('cats/{cat}/delete', function(Furbook\Cat $cat) 
+{
 	$cat->delete();
-	return redirect('cats')->withSuccess('This cat has been eliminated.');
+	return redirect('cats')
+		->withSuccess('This cat has been eliminated.');
 });
 
 Route::put('cats/{cat}', function(Furbook\Cat $cat)
