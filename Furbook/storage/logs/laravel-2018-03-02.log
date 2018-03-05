@@ -1,0 +1,114 @@
+[2018-03-02 19:23:42] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '=>' (T_DOUBLE_ARROW)' in C:\xampp\htdocs\Furbook\storage\framework\views\200cae8408c16c85148f4836ae2e1c9e:6
+Stack trace:
+#0 {main}  
+[2018-03-02 19:23:55] local.ERROR: exception 'ErrorException' with message 'Trying to get property of non-object' in C:\xampp\htdocs\Furbook\storage\framework\views\303489141a92644949c4e326c2b97349:17
+Stack trace:
+#0 C:\xampp\htdocs\Furbook\storage\framework\views\303489141a92644949c4e326c2b97349(17): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 17, Array)
+#1 C:\xampp\htdocs\Furbook\vendor\compiled.php(14194): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Furbook\vendor\compiled.php(14228): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\Furbook\vendor\compiled.php(14065): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\Furbook\vendor\compiled.php(14052): Illuminate\View\View->getContents()
+#5 C:\xampp\htdocs\Furbook\vendor\compiled.php(14039): Illuminate\View\View->renderContents()
+#6 C:\xampp\htdocs\Furbook\vendor\compiled.php(15148): Illuminate\View\View->render()
+#7 C:\xampp\htdocs\Furbook\vendor\compiled.php(14674): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#8 C:\xampp\htdocs\Furbook\vendor\compiled.php(7419): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#9 C:\xampp\htdocs\Furbook\vendor\compiled.php(7219): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#10 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\Furbook\vendor\compiled.php(9244): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#12 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#13 C:\xampp\htdocs\Furbook\vendor\compiled.php(9227): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#14 C:\xampp\htdocs\Furbook\vendor\compiled.php(7220): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#15 C:\xampp\htdocs\Furbook\vendor\compiled.php(7209): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#16 C:\xampp\htdocs\Furbook\vendor\compiled.php(7194): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#17 C:\xampp\htdocs\Furbook\vendor\compiled.php(2040): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#19 C:\xampp\htdocs\Furbook\vendor\compiled.php(9244): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#20 C:\xampp\htdocs\Furbook\vendor\compiled.php(2548): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 C:\xampp\htdocs\Furbook\app\Http\Middleware\VerifyCsrfToken.php(17): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#22 C:\xampp\htdocs\Furbook\vendor\compiled.php(9236): Furbook\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 C:\xampp\htdocs\Furbook\vendor\compiled.php(12416): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 C:\xampp\htdocs\Furbook\vendor\compiled.php(9236): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 C:\xampp\htdocs\Furbook\vendor\compiled.php(11106): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 C:\xampp\htdocs\Furbook\vendor\compiled.php(9236): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 C:\xampp\htdocs\Furbook\vendor\compiled.php(12118): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 C:\xampp\htdocs\Furbook\vendor\compiled.php(9236): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 C:\xampp\htdocs\Furbook\vendor\compiled.php(12066): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 C:\xampp\htdocs\Furbook\vendor\compiled.php(9236): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 C:\xampp\htdocs\Furbook\vendor\compiled.php(2589): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 C:\xampp\htdocs\Furbook\vendor\compiled.php(9236): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#33 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#34 C:\xampp\htdocs\Furbook\vendor\compiled.php(9227): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#35 C:\xampp\htdocs\Furbook\vendor\compiled.php(1996): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#36 C:\xampp\htdocs\Furbook\vendor\compiled.php(1983): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#37 C:\xampp\htdocs\Furbook\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#38 {main}
+
+Next exception 'ErrorException' with message 'Trying to get property of non-object (View: C:\xampp\htdocs\Furbook\resources\views\cats\index.blade.php)' in C:\xampp\htdocs\Furbook\storage\framework\views\303489141a92644949c4e326c2b97349:17
+Stack trace:
+#0 C:\xampp\htdocs\Furbook\vendor\compiled.php(14196): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(ErrorException), 1)
+#1 C:\xampp\htdocs\Furbook\vendor\compiled.php(14228): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\Furbook\vendor\compiled.php(14065): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\Furbook\vendor\compiled.php(14052): Illuminate\View\View->getContents()
+#4 C:\xampp\htdocs\Furbook\vendor\compiled.php(14039): Illuminate\View\View->renderContents()
+#5 C:\xampp\htdocs\Furbook\vendor\compiled.php(15148): Illuminate\View\View->render()
+#6 C:\xampp\htdocs\Furbook\vendor\compiled.php(14674): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 C:\xampp\htdocs\Furbook\vendor\compiled.php(7419): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#8 C:\xampp\htdocs\Furbook\vendor\compiled.php(7219): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#9 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\Furbook\vendor\compiled.php(9244): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#11 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\Furbook\vendor\compiled.php(9227): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#13 C:\xampp\htdocs\Furbook\vendor\compiled.php(7220): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#14 C:\xampp\htdocs\Furbook\vendor\compiled.php(7209): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#15 C:\xampp\htdocs\Furbook\vendor\compiled.php(7194): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#16 C:\xampp\htdocs\Furbook\vendor\compiled.php(2040): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#18 C:\xampp\htdocs\Furbook\vendor\compiled.php(9244): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 C:\xampp\htdocs\Furbook\vendor\compiled.php(2548): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 C:\xampp\htdocs\Furbook\app\Http\Middleware\VerifyCsrfToken.php(17): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 C:\xampp\htdocs\Furbook\vendor\compiled.php(9236): Furbook\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#22 C:\xampp\htdocs\Furbook\vendor\compiled.php(12416): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\Furbook\vendor\compiled.php(9236): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 C:\xampp\htdocs\Furbook\vendor\compiled.php(11106): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 C:\xampp\htdocs\Furbook\vendor\compiled.php(9236): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 C:\xampp\htdocs\Furbook\vendor\compiled.php(12118): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 C:\xampp\htdocs\Furbook\vendor\compiled.php(9236): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 C:\xampp\htdocs\Furbook\vendor\compiled.php(12066): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 C:\xampp\htdocs\Furbook\vendor\compiled.php(9236): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#30 C:\xampp\htdocs\Furbook\vendor\compiled.php(2589): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 C:\xampp\htdocs\Furbook\vendor\compiled.php(9236): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 C:\xampp\htdocs\Furbook\vendor\compiled.php(9227): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#34 C:\xampp\htdocs\Furbook\vendor\compiled.php(1996): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#35 C:\xampp\htdocs\Furbook\vendor\compiled.php(1983): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#36 C:\xampp\htdocs\Furbook\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#37 {main}  
+[2018-03-02 20:03:41] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined function csrf_field()' in C:\xampp\htdocs\Furbook\storage\framework\views\200cae8408c16c85148f4836ae2e1c9e:8
+Stack trace:
+#0 {main}  
+[2018-03-02 20:26:08] local.ERROR: exception 'ErrorException' with message 'Argument 1 passed to Illuminate\Session\Middleware\StartSession::addCookieToResponse() must be an instance of Symfony\Component\HttpFoundation\Response, null given, called in C:\xampp\htdocs\Furbook\vendor\compiled.php on line 11110 and defined' in C:\xampp\htdocs\Furbook\vendor\compiled.php:11149
+Stack trace:
+#0 C:\xampp\htdocs\Furbook\vendor\compiled.php(11149): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(4096, 'Argument 1 pass...', 'C:\\xampp\\htdocs...', 11149, Array)
+#1 C:\xampp\htdocs\Furbook\vendor\compiled.php(11110): Illuminate\Session\Middleware\StartSession->addCookieToResponse(NULL, Object(Illuminate\Session\Store))
+#2 C:\xampp\htdocs\Furbook\vendor\compiled.php(9236): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#3 C:\xampp\htdocs\Furbook\vendor\compiled.php(12118): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Furbook\vendor\compiled.php(9236): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#5 C:\xampp\htdocs\Furbook\vendor\compiled.php(12066): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#6 C:\xampp\htdocs\Furbook\vendor\compiled.php(9236): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#7 C:\xampp\htdocs\Furbook\vendor\compiled.php(2589): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#8 C:\xampp\htdocs\Furbook\vendor\compiled.php(9236): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#9 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\Furbook\vendor\compiled.php(9227): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\Furbook\vendor\compiled.php(1996): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#12 C:\xampp\htdocs\Furbook\vendor\compiled.php(1983): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#13 C:\xampp\htdocs\Furbook\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#14 {main}  
+[2018-03-02 22:09:31] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'h' (T_STRING)' in C:\xampp\htdocs\Furbook\storage\framework\views\297c4b7127c8390427ad12016dc3f2f6:27
+Stack trace:
+#0 {main}  
+[2018-03-02 22:09:59] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'i' (T_STRING)' in C:\xampp\htdocs\Furbook\storage\framework\views\297c4b7127c8390427ad12016dc3f2f6:27
+Stack trace:
+#0 {main}  
+[2018-03-02 22:10:03] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'i' (T_STRING)' in C:\xampp\htdocs\Furbook\storage\framework\views\297c4b7127c8390427ad12016dc3f2f6:27
+Stack trace:
+#0 {main}  

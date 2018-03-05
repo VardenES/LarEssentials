@@ -76,4 +76,4 @@ Route::get('about', function()
 	return view('about')->with('number_of_cats', 9000);
 });
 
-// Route::resource('cat', 'CatController');
+// Pg 109 del pdf, pg 90 del manual.

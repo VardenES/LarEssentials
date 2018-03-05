@@ -24,7 +24,11 @@
 @stop
 
 @section('content')
-	<p>Date of Birth: {{ $cat->date_of_birth }}</p>
+	<p>Date of Birth: {{ $cat->date_of_birth }} </br>
+		{{ Carbon\Carbon::parse($cat->date_of_birth)->format('d-m-Y') }} </br>
+		{{ Carbon\Carbon::parse($cat->date_of_birth)->format('d-m-Y h:i') }} </br>
+		{{ Carbon\Carbon::parse($cat->date_of_birth)->format('l j \\of F Y h:i') }} </br>		
+	</p>
 	<p>
 		@if ($cat->breed)
 			Breed:
